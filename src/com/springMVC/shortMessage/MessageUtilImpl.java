@@ -1,5 +1,7 @@
 package com.springMVC.shortMessage;
 
+import java.net.HttpURLConnection;
+import java.net.URL;
 import java.util.Random;
 
 public class MessageUtilImpl implements MessageUtils {
@@ -22,8 +24,38 @@ public class MessageUtilImpl implements MessageUtils {
 	@Override
 	public boolean teltest(String tel) {
 		boolean result;
+		//待扩展
+		
 		result=true;
 		return result;
 	}
+	//模板生成
+	public String creatTemp(String tel){
+		String httpArg=null;
+		httpArg = "mobile=13863638369&content=%e3%80%90%e9%82%b9%e5%bf%97%e5%85%a8%e3%80%91%e6%82%a8%e7%9a%84%e9%aa%8c%e8%af%81%e7%a0%81%e6%98%af"+creatCode()+"%ef%bc%8c%e6%9c%89%e6%95%88%e6%97%b6%e9%97%b45%e5%88%86%e9%92%9f%ef%bc%8c%e8%af%b7%e4%b8%8d%e8%a6%81%e5%91%8a%e8%af%89%e4%bb%96%e4%ba%ba";
+		return httpArg;
+	}
+	//发送验证码短信
+	@Override
+	public  void request( String httpArg) {
+		String httpUrl="http://apis.baidu.com/kingtto_media/106sms/106sms";
+	    httpUrl = httpUrl + "?" + httpArg;
+
+	    try {
+	        URL url = new URL(httpUrl);
+	        HttpURLConnection connection = (HttpURLConnection) url
+	                .openConnection();
+	        connection.setRequestMethod("GET");
+	        // 填入apikey到HTTP header
+	        connection.setRequestProperty("apikey",  "76921004adbdb74eb29c12e79ae38ee7");
+	        connection.connect();
+	        connection.getInputStream();
+	  }
+	        catch (Exception e) {
+	        e.printStackTrace();
+	    }
+	}
+	
+	
 
 }
