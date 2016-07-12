@@ -21,6 +21,7 @@ public class MessageController {
 	public void shortMassage(HttpServletRequest request, HttpServletResponse response){
 		System.out.println("ok");
 		//获取管理器
+		@SuppressWarnings("resource")
 		AnnotationConfigApplicationContext applicationContext=
 				new AnnotationConfigApplicationContext(com.springMVC.MessageService.MessageBeanConfiguration.class);
 		//获取该bean
@@ -55,8 +56,10 @@ public class MessageController {
 		return mv;
 	}
 	
+	@SuppressWarnings("unused")
 	@RequestMapping(value="",method=RequestMethod.POST)
 	public void sendMail(HttpServletRequest request,HttpServletRequest resonse){
+		@SuppressWarnings("resource")
 		AnnotationConfigApplicationContext applicationContext=
 				new AnnotationConfigApplicationContext(com.springMVC.MessageService.MessageBeanConfiguration.class);
 		
