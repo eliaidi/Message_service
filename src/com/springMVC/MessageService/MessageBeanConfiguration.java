@@ -10,5 +10,10 @@ public class MessageBeanConfiguration {
 		MessageUtilImpl bean=new MessageUtilImpl();
 		return bean;
 	}
+	@Bean
+	public SendMail sendMail(){
+		SendMailImpl bean=new SendMailImpl();
+		return bean;
+	}
 
 }

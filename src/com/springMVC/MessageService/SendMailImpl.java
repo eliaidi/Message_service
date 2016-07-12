@@ -18,7 +18,6 @@ import javax.mail.internet.MimeMessage;
 import javax.mail.internet.MimeMultipart;
 import javax.mail.internet.MimeUtility;
 
-import com.springMVC.test.MailTest.MyAuthenticator;
 
 
 public class SendMailImpl implements SendMail {

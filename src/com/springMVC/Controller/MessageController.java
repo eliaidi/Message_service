@@ -54,4 +54,11 @@ public class MessageController {
 		mv.setViewName("/hello");
 		return mv;
 	}
+	
+	@RequestMapping(value="",method=RequestMethod.POST)
+	public void sendMail(HttpServletRequest request,HttpServletRequest resonse){
+		AnnotationConfigApplicationContext applicationContext=
+				new AnnotationConfigApplicationContext(com.springMVC.MessageService.MessageBeanConfiguration.class);
+		
+	}
 }

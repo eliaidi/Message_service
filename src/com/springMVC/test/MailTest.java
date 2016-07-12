@@ -50,7 +50,7 @@ public class MailTest {
     private static String from = "zouzq7@sina.com"; 
 
     // 收件人 
-    private static String to = "zouzq7@163.com"; 
+    private static String to = "1332906830@qq.com"; 
 
     // 初始化连接邮件服务器的会话信息 
     private static Properties props = null; 
@@ -99,7 +99,7 @@ public class MailTest {
         // 设置发送时间 
         message.setSentDate(new Date()); 
         // 设置纯文本内容为邮件正文 
-        message.setText("使用POP3协议发送文本邮件测试!!!"); 
+        message.setText("李远"); 
         // 保存并生成最终的邮件内容 
         message.saveChanges(); 
 

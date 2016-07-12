@@ -16,5 +16,5 @@ public interface SendMail {
 	//待修改
     public void sendHtmlWithInnerImageEmail(SendMailImpl sm,MyAuthenticator ma,String title,InternetAddress ia) throws MessagingException;
     //待修改
-    public void sendMultipleEmail() throws Exception;
+    public void sendMultipleEmail(String title,InternetAddress ia) throws Exception;
 }
