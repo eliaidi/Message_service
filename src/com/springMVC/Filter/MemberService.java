@@ -13,15 +13,15 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 /**
- * Servlet Filter implementation class UserService
+ * Servlet Filter implementation class MemberService
  */
-@WebFilter("/UserService")
-public class UserService implements Filter {
+@WebFilter("/MemberService")
+public class MemberService implements Filter {
 
     /**
      * Default constructor. 
      */
-    public UserService() {
+    public MemberService() {
         // TODO Auto-generated constructor stub
     }
 
@@ -36,16 +36,15 @@ public class UserService implements Filter {
 	 * @see Filter#doFilter(ServletRequest, ServletResponse, FilterChain)
 	 */
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
-			HttpServletRequest requ=(HttpServletRequest)request;
-			HttpServletResponse resp=(HttpServletResponse)response;
-			HttpSession session=requ.getSession(true);
-			String id=(String) session.getAttribute("id");
-			if(id.equals("###")){
-				resp.sendRedirect("");//重定向到用户登录注册界面
-			}else{
-				chain.doFilter(request, response);
-			}
-			chain.doFilter(request, response);
+		HttpServletRequest requ=(HttpServletRequest)request;
+		HttpServletResponse resp=(HttpServletResponse)response;
+		HttpSession session=requ.getSession(true);
+		String power=(String) session.getAttribute("power");
+		if(power.equals("#")){
+			resp.sendRedirect("");//重定向到用户充值界面
+		}else{
+		chain.doFilter(request, response);
+		}
 	}
 
 	/**

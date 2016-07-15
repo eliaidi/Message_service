@@ -15,6 +15,7 @@ public class UserServiceController {
 	@RequestMapping(value="/hello")
 	public ModelAndView register(){//注册
 		ModelAndView mv=new ModelAndView();
+		
 		mv.setViewName("/hello");
 		return mv;
 	}

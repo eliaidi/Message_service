@@ -13,4 +13,34 @@
 		*.do
 		</url-pattern>
   </servlet-mapping>
+  <filter>
+    <filter-name>UserService</filter-name>
+    <filter-class>com.springMVC.Filter.UserService</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>UserService</filter-name>
+    <url-pattern>
+  /*特定界面
+  </url-pattern>
+  </filter-mapping>
+  <filter>
+    <filter-name>MemberService</filter-name>
+    <filter-class>com.springMVC.Filter.MemberService</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>MemberService</filter-name>
+    <url-pattern>
+  /*特定界面
+  </url-pattern>
+  </filter-mapping>
+  <filter>
+    <filter-name>InitSession</filter-name>
+    <filter-class>com.springMVC.Filter.InitSession</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>InitSession</filter-name>
+    <url-pattern>
+  /*
+  </url-pattern>
+  </filter-mapping>
 </web-app>
