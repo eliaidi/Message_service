@@ -13,7 +13,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 import com.springMVC.entity.Goods;
 import com.springMVC.entity.Ordering;
 
-public class OrderingImpl implements OrderingDao {
+public class OrderingDaoImpl implements OrderingDao {
 	private static AnnotationConfigApplicationContext applicationContext;
 	private static EntityManagerFactory entityManagerFactory;
 	
