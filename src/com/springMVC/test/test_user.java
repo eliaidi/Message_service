@@ -16,7 +16,7 @@ public class test_user {
 
 	public static void main(String[] args) {
 		AnnotationConfigApplicationContext applicationContext=
-				new AnnotationConfigApplicationContext(com.springMVC.userService.UserBeanConfiguration.class);
+				new AnnotationConfigApplicationContext(com.springMVC.Config.UserBeanConfiguration.class);
 		User_basic user=new User_basic("name", "pwd", 12, null, "se","123@163.com", "123323");
 		UserDao bean=applicationContext.getBean(UserDao.class);
 		bean.AddUser(user);

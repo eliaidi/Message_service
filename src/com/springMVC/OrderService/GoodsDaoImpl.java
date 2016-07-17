@@ -1,4 +1,4 @@
-package com.springMVC.userService;
+package com.springMVC.OrderService;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,11 +10,10 @@ import javax.persistence.Query;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
+import com.springMVC.entity.Goods;
 import com.springMVC.entity.User_basic;
-import com.springMVC.entity.User_member;
-import com.springMVC.entity.User_service;
 
-public class UserDaoImpl implements UserDao {
+public class GoodsDaoImpl implements GoodsDao {
 	private static AnnotationConfigApplicationContext applicationContext;
 	private static EntityManagerFactory entityManagerFactory;
 	
@@ -25,159 +24,137 @@ public class UserDaoImpl implements UserDao {
 	}
 
 	@Override
-	public int AddUser(User_basic user) {
+	public int AddGoods(Goods goods) {
 		EntityManager entityManager = entityManagerFactory
 				.createEntityManager();
 		EntityTransaction transaction = entityManager.getTransaction();
 		transaction.begin();
-		entityManager.persist(user);
+		entityManager.persist(goods);
 		transaction.commit();
 		entityManager.close();
 		return 1;
 	}
 
 	@Override
-	public int DeleteUser(String id) {
-		
+	public int DeleteGoods(String id) {
 		EntityManager entityManager = entityManagerFactory
 				.createEntityManager();
 		EntityTransaction transaction = entityManager.getTransaction();
 		transaction.begin();
-		String sql="select u from User_basic u where u.id like ?";
+		String sql="select g from Goods g where g.sku like ?";
 		Query query=entityManager.createQuery(sql);
 		query.setParameter(1, id);
-		List<User_basic> users=query.getResultList();
-		entityManager.remove(users.get(0));
+		List<Goods> goods=query.getResultList();
+		entityManager.remove(goods.get(0));
 		transaction.commit();
 		entityManager.close();
 		return 1;
 	}
 
 	@Override
-	public int UpdateUser(User_basic user) {
-		
+	public List<Goods> FindAll() {
 		EntityManager entityManager = entityManagerFactory
 				.createEntityManager();
 		EntityTransaction transaction = entityManager.getTransaction();
 		transaction.begin();
-		String sql="select u from User_basic u where u.id like ?";
+		String sql="select g from Goods g";
 		Query query=entityManager.createQuery(sql);
-		query.setParameter(1, user.getId());
-		List<User_basic> users=query.getResultList();
-		users.get(0).allset(user);
+		List<Goods> goods=query.getResultList();
+		entityManager.remove(goods.get(0));
+		transaction.commit();
+		entityManager.close();
+		return goods;
+	}
+
+	@Override
+	public List<Goods> NameFind(String name) {
+		EntityManager entityManager = entityManagerFactory
+				.createEntityManager();
+		EntityTransaction transaction = entityManager.getTransaction();
+		transaction.begin();
+		String sql="select g from Goods g where g.name like ?";
+		Query query=entityManager.createQuery(sql);
+		query.setParameter(1,name);
+		List<Goods> goods=query.getResultList();
+		transaction.commit();
+		entityManager.close();
+		return goods;
+	}
+
+	@Override
+	public Goods IdFind(String Id) {
+		EntityManager entityManager = entityManagerFactory
+				.createEntityManager();
+		EntityTransaction transaction = entityManager.getTransaction();
+		transaction.begin();
+		String sql="select g from Goods g where g.sku like ?";
+		Query query=entityManager.createQuery(sql);
+		query.setParameter(1, Id);
+		List<Goods> goods=query.getResultList();
+		transaction.commit();
+		entityManager.close();
+		return goods.get(0);
+	}
+
+	@Override
+	public int UpdateName(String name,String sku) {
+		EntityManager entityManager = entityManagerFactory
+				.createEntityManager();
+		EntityTransaction transaction = entityManager.getTransaction();
+		transaction.begin();
+		String sql="select g from Goods g where g.sku like ?";
+		Query query=entityManager.createQuery(sql);
+		query.setParameter(1, sku);
+		List<Goods> goods=query.getResultList();
+		Goods gg=goods.get(0);
+		gg.setName(name);
 		transaction.commit();
 		entityManager.close();
 		return 1;
 	}
 
 	@Override
-	public User_basic FindOne(String id) {
-		
+	public int UpdatePrice(String sku,double price) {
 		EntityManager entityManager = entityManagerFactory
 				.createEntityManager();
 		EntityTransaction transaction = entityManager.getTransaction();
 		transaction.begin();
-		String sql="select u from User_basic u where u.id like ?";
+		String sql="select g from Goods g where g.sku like ?";
 		Query query=entityManager.createQuery(sql);
-		query.setParameter(1, id);
-		List<User_basic> users=query.getResultList();
-		transaction.commit();
-		entityManager.close();
-		return users.get(0);
-	}
-
-	@Override
-	public ArrayList<User_basic> FindAll() {
-		
-		EntityManager entityManager = entityManagerFactory
-				.createEntityManager();
-		EntityTransaction transaction = entityManager.getTransaction();
-		transaction.begin();
-		String sql="select u from User_basic u";
-		Query query=entityManager.createQuery(sql);
-		List<User_basic> users=query.getResultList();
-		transaction.commit();
-		entityManager.close();
-		return (ArrayList<User_basic>) users;
-	}
-	
-	@Override
-	public int updatePower(int power,String id){
-		EntityManager entityManager = entityManagerFactory
-				.createEntityManager();
-		EntityTransaction transaction = entityManager.getTransaction();
-		transaction.begin();
-		String sql="select u from User_basic u where u.id like ?";
-		Query query=entityManager.createQuery(sql);
-		query.setParameter(1, id);
-		List<User_basic> users=query.getResultList();
-		users.get(0).setPower(power);
-		transaction.commit();
-		entityManager.close();
+		query.setParameter(1, sku);
+		List<Goods> goods=query.getResultList();
+		Goods gg=goods.get(0);
+		gg.setShopPrice(price);
 		return 1;
 	}
 
 	@Override
-	public int updatePwd(String pwd,String id){
+	public int UpdateCount(String sku,int count) {
 		EntityManager entityManager = entityManagerFactory
 				.createEntityManager();
 		EntityTransaction transaction = entityManager.getTransaction();
 		transaction.begin();
-		String sql="select u from User_basic u where u.id like ?";
+		String sql="select g from Goods g where g.sku like ?";
 		Query query=entityManager.createQuery(sql);
-		query.setParameter(1, id);
-		List<User_basic> users=query.getResultList();
-		users.get(0).setPwd(pwd);
-		transaction.commit();
-		entityManager.close();
-		return 1;
-	}
-	@Override
-	public int UpdateUserService(User_service suser) {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-
-	@Override
-	public User_service FindOneService(String id) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public ArrayList<User_service> FindAllService() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public int AddMember(String id) {
-
-		EntityManager entityManager = entityManagerFactory
-				.createEntityManager();
-		EntityTransaction transaction = entityManager.getTransaction();
-		transaction.begin();
-		User_member member=new User_member(id);
-		entityManager.persist(member);
-		transaction.commit();
-		entityManager.close();
+		query.setParameter(1, sku);
+		List<Goods> goods=query.getResultList();
+		Goods gg=goods.get(0);
+		gg.setStock(count);
 		return 1;
 	}
 
 	@Override
-	public int DeleteMember(String id) {
-	
+	public int UpdateIsOnSale(String sku,String isOnSale) {
 		EntityManager entityManager = entityManagerFactory
 				.createEntityManager();
 		EntityTransaction transaction = entityManager.getTransaction();
 		transaction.begin();
-		String sql="select u from User_member m where m.id like ?";
+		String sql="select g from Goods g where g.sku like ?";
 		Query query=entityManager.createQuery(sql);
-		query.setParameter(1, id);
-		List<User_member> members=query.getResultList();
-		entityManager.remove(members.get(0));
-		transaction.commit();
-		entityManager.close();
+		query.setParameter(1, sku);
+		List<Goods> goods=query.getResultList();
+		Goods gg=goods.get(0);
+		gg.setName(isOnSale);
 		return 1;
 	}
 

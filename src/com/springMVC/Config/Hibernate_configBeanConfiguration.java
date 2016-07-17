@@ -1,4 +1,4 @@
-package com.springMVC.userService;
+package com.springMVC.Config;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -12,8 +12,9 @@ import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
 
 @Configuration
-public class UserBeanConfiguration {
-    public DataSource dataSource() {
+public class Hibernate_configBeanConfiguration {
+	private static LocalContainerEntityManagerFactoryBean factoryBean;
+	public DataSource dataSource() {
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
         dataSource.setDriverClassName("com.mysql.jdbc.Driver");
         dataSource.setUrl("jdbc:mysql://localhost:3306/Service");
@@ -30,7 +31,7 @@ public class UserBeanConfiguration {
 
 	@Bean
     public LocalContainerEntityManagerFactoryBean entityManagerFactory() {
-        LocalContainerEntityManagerFactoryBean factoryBean = 
+        factoryBean = 
             new LocalContainerEntityManagerFactoryBean();
         factoryBean.setPersistenceProviderClass(HibernatePersistence.class);
         factoryBean.setDataSource(dataSource());
@@ -39,17 +40,4 @@ public class UserBeanConfiguration {
         factoryBean.setJpaPropertyMap(jpaProperties());
         return factoryBean;
     }
-	@Bean
-	public UserDao userDao(){
-		UserDao bean=new UserDaoImpl();
-		return bean;
-	}
-	
-	@Bean
-	public UserManager userManager(){
-		UserManager bean=new UserManagerImpl();
-		return bean;
-	}
-	
-
 }

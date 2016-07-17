@@ -1,7 +1,12 @@
-package com.springMVC.MessageService;
+package com.springMVC.Config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+
+import com.springMVC.MessageService.MessageUtilImpl;
+import com.springMVC.MessageService.MessageUtils;
+import com.springMVC.MessageService.SendMail;
+import com.springMVC.MessageService.SendMailImpl;
 
 @Configuration
 public class MessageBeanConfiguration {

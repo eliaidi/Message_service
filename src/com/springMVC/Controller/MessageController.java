@@ -23,7 +23,7 @@ public class MessageController {
 		//获取管理器
 		@SuppressWarnings("resource")
 		AnnotationConfigApplicationContext applicationContext=
-				new AnnotationConfigApplicationContext(com.springMVC.MessageService.MessageBeanConfiguration.class);
+				new AnnotationConfigApplicationContext(com.springMVC.Config.MessageBeanConfiguration.class);
 		//获取该bean
 		MessageUtils mu=(MessageUtils) applicationContext.getBean("messageUtils");
 		//获取手机号
@@ -61,7 +61,7 @@ public class MessageController {
 	public void sendMail(HttpServletRequest request,HttpServletRequest resonse){
 		@SuppressWarnings("resource")
 		AnnotationConfigApplicationContext applicationContext=
-				new AnnotationConfigApplicationContext(com.springMVC.MessageService.MessageBeanConfiguration.class);
+				new AnnotationConfigApplicationContext(com.springMVC.Config.MessageBeanConfiguration.class);
 		
 	}
 }

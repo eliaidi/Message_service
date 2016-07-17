@@ -1,10 +1,13 @@
 package com.springMVC.MessageService;
 
-public class testMessagesService {
+import org.junit.Test;
 
-	public static void main(String[] args) {
+public class testMessagesService {
+	
+	@Test
+	public void send(){
 		MessageUtilImpl ml=new MessageUtilImpl();
-		String arg=ml.creatTemp("18058519203", ml.creatCode());
+		String arg=ml.creatTemp("13863638369", ml.creatCode());
 		ml.request(arg);
 	}
 

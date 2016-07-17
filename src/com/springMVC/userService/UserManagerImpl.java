@@ -5,6 +5,7 @@ import java.util.ArrayList;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
+import com.springMVC.Config.UserBeanConfiguration;
 import com.springMVC.entity.User_basic;
 
 public class UserManagerImpl implements UserManager {
