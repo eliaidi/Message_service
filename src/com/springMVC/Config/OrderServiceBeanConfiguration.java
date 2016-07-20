@@ -5,8 +5,6 @@ import org.springframework.context.annotation.Configuration;
 
 import com.springMVC.OrderService.GoodsDao;
 import com.springMVC.OrderService.GoodsDaoImpl;
-import com.springMVC.OrderService.OrderLastDao;
-import com.springMVC.OrderService.OrderLastDaoImpl;
 import com.springMVC.OrderService.OrderingDao;
 import com.springMVC.OrderService.OrderingDaoImpl;
 import com.springMVC.OrderService.ShoppingCartDao;
@@ -27,11 +25,6 @@ public class OrderServiceBeanConfiguration {
 		return bean;
 	}
 	
-	@Bean
-	public OrderLastDao orderLastDaoImpl(){
-		OrderLastDao bean= new OrderLastDaoImpl();
-		return bean;
-	}
 	
 	@Bean
 	public ShoppingCartDao shoppingCartDao(){

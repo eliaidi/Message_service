@@ -22,6 +22,7 @@ public interface OrderingDao {
 	public Ordering findOne(String id);
 	//查找所有订单
 	public List<Ordering> findall();
+	//订单状态修改
 	
 	/**
 	 *订单生成 

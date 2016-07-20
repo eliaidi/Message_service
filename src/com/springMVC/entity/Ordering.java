@@ -42,6 +42,8 @@ public class Ordering {
 	public void setTel(String tel) {
 		this.tel = tel;
 	}
+	@Column(name="kind")
+	private String kind;//订单完成种类：取消、完成
 
 	@ManyToMany
 	@JoinTable(name="Goods_Ordering",joinColumns=@JoinColumn(name="order_id"),
