@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    @@include('_meta.inc')
+    <title>${pageTitle}</title>
+    <!-- build:css ../css/login.css -->
+    <link rel="stylesheet" href="../css/public/base.css"/>
+    <link rel="stylesheet" href="../css/public/header.css"/>
+    <link rel="stylesheet" href="../css/public/footer.css"/>
+
+    <link rel="stylesheet" href="../css/login.css"/>
+    <!-- endbuild -->
+</head>
+<body class="login">
+
+    @@include('_simpleHeader.inc')
+
+    <div class="content clearfix">
+        <div class="banner wrapper">
+            <img src="../img/banner.png"/>
+            <div class="login-wrap">
+                <form class="login-form">
+                    <a href="${memberRegisterUrl}" class="register-btn">立即注册</a>
+                    <h1>会员登录</h1>
+                    <p class="tips"><b></b>公共场所不建议自动登录，以防账号丢失</p>
+                    <div class="input-item">
+                        <div class="input-wrap">
+                            <span class="label">用户名:</span>
+                            <div class="input-bar">
+                                <input type="text" placeholder="您的登录名" maxlength="20"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="input-item">
+                        <div class="input-wrap">
+                            <span class="label space">密码:</span>
+                            <div class="input-bar">
+                                <input type="password" placeholder="请输入密码" maxlength="20"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="input-item">
+                        <div class="input-wrap">
+                            <span class="label">验证码:</span>
+                            <div class="validate-code">
+                                <img src="../img/validate-code.png"/>
+                            </div>
+                            <div class="input-bar validate">
+                                <input type="text" placeholder="请输入验证码" maxlength="6"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tool-bar clearfix">
+                        <input type="checkbox" checked />自动登录<a href="${findPwdUrl}" class="float-r">忘记密码?</a>
+                    </div>
+                    <input type="submit" class="login-btn active" value="登录"/>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <input type="hidden" id="ip" value="192.1168.0.1"/>
+
+    @@include('_simpleFooter.inc')
+
+    <!-- build:js ../js/login.js -->
+    <script src="../js/utils/jquery.min.js"></script>
+    <script src="../js/utils/jquery.validate.js"></script>
+    <script src="../js/utils/ivagner.js"></script>
+
+    <script src="../js/login.js"></script>
+    <!-- endbuild -->
+</body>
+</html>

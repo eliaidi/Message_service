@@ -52,7 +52,7 @@ public class MessageController {
 	@RequestMapping(value="/hello")
 	public ModelAndView show(){
 		ModelAndView mv=new ModelAndView();
-		mv.setViewName("/hello");
+		mv.setViewName("/login");
 		return mv;
 	}
 	

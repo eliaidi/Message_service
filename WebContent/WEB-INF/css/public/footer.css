@@ -1,0 +1,20 @@
+/* simple footer */
+.simple-footer{
+	padding: 20px 0;
+	border-top: 1px solid #eee;
+	text-align: center;
+	font-size: 14px;
+	color: #999;
+}
+.simple-footer .links{
+	margin-bottom: 15px;
+}
+.simple-footer .links span{
+	padding: 0 20px;
+	border-right: 1px solid #ddd;
+	line-height: 16px;
+}
+.simple-footer .links a{
+	color: #999;
+}
+/* footer */

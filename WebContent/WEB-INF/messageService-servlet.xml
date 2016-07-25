@@ -15,7 +15,7 @@
 		<context:component-scan base-package="com.springMVC.Controller"/>
 		<context:annotation-config />
 		<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-		<property name="prefix" value="/WEB-INF/pages" />
-		<property name="suffix" value=".jsp"/>
+		<property name="prefix" value="/WEB-INF/html" />
+		<property name="suffix" value=".html"/>
 		</bean>
 </beans>

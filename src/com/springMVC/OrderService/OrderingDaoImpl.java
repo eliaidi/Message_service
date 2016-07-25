@@ -118,9 +118,4 @@ public class OrderingDaoImpl implements OrderingDao {
 		return 1;
 	}
 	
-	//获取订单数量
-	public int getCount(){
-		return 0;
-	}
-
 }

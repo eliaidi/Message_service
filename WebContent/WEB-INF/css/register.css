@@ -1,0 +1,120 @@
+.register > .content{
+	margin: 40px auto;
+}
+.register .main-panel{
+	margin-right: 560px;
+	padding: 0 60px 0 120px;
+	border-right: 1px solid #ddd;
+}
+.register .right-panel{
+	float: right;
+	padding: 0 40px;
+	width: 480px;
+}
+.reg-form{
+	font-size: 14px;
+}
+.reg-form > .input-item{
+	margin-bottom: 20px;
+}
+.reg-form > .input-item > .input-wrap > .select-bar,
+.reg-form > .input-item > .input-wrap > .input-bar{
+	margin-left: 80px;
+}
+.reg-form > .input-item > .input-wrap > .input-bar,
+.reg-form > .input-item > .input-wrap > .input-bar.success{
+	 padding: 14px 5px;
+	 height: 15px;
+	 border: 1px solid #ddd;
+	 line-height: 15px;
+ }
+.reg-form > .input-item > .input-wrap > .input-bar.error{
+	border: 1px solid #f15353;
+}
+.reg-form > .input-item > .tips{
+	margin-top: 5px;
+	padding-left: 20px;
+	background: url("../img/info@20.png") center left no-repeat;
+	line-height: 20px;
+	font-size: 12px;
+	color: #999;
+}
+.reg-form > .input-item > .tips.clearfix{
+	background: none;
+}
+.reg-form > .input-item > .input-wrap > .label{
+	display: inline-block;
+	float: left;
+	line-height: 45px;
+}
+.reg-form > .input-item > .tips > .member-type{
+	float: right;
+	color: #16914f;
+}
+.reg-form > .input-item > .input-wrap > .select-bar > .select-item{
+	float: left;
+	width: 160px;
+	height: 45px;
+	background: #eee;
+	border: 1px solid #eee;
+	text-align: center;
+	line-height: 45px;
+	color: #999;
+}
+.reg-form > .input-item > .input-wrap > .select-bar > .select-item.person{
+	margin-right: 50px;
+}
+.reg-form > .input-item > .input-wrap > .select-bar > .select-item.active{
+	border: 1px solid #16914f;
+	background: #16914f;
+	color: #fff;
+	font-weight: 500;
+}
+.reg-form > .input-item > .input-wrap > .input-bar.validate{
+	margin-right: 110px;
+}
+.reg-form > .input-item > .input-wrap > .validate-code{
+	float: right;
+	width: 100px;
+}
+.reg-form > .input-item > .input-wrap > .validate-btn{
+	float: right;
+	width: 100px;
+	height: 45px;
+	text-align: center;
+	line-height: 45px;
+	background: #eee;
+	color: #999;
+}
+.reg-form > .input-item > .input-wrap > .validate-btn.active{
+	background: #16914f;
+	color: #fff;
+}
+.reg-form > .user-agreement > input{
+	display: inline-block;
+	margin-right: 5px;
+	width: auto;
+}
+.reg-form > .user-agreement > a{
+	margin: 0 5px;
+	color: #16914f;
+}
+.reg-form > .reg-btn{
+	margin-top: 30px;
+	height: 50px;
+	background: #eee;
+	font-size: 16px;
+	text-align: center;
+	line-height: 50px;
+	color: #999;
+}
+.reg-form > .reg-btn.active{
+	background: #16914f;
+	font-size: 16px;
+	text-align: center;
+	line-height: 50px;
+	color: #fff;
+}
+.register .right-panel{
+
+}

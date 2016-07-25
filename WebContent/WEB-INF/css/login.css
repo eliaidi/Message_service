@@ -1,0 +1,109 @@
+.login > .simple-header{
+	border-bottom: none;
+}
+.login > .simple-footer{
+	border-top: none;
+}
+.login > .content{
+	background: #16914f;
+}
+.login > .content > .banner{
+	position: relative;
+	margin: 0 auto;
+}
+.login-wrap{
+	position: absolute;
+	top: 20px;
+	right: 100px;
+	width: 300px;
+	padding: 40px;
+	background: #fff;
+	font-size: 14px;
+	color: #666;
+	z-index: 1
+}
+.login-wrap > form > h1{
+	margin-bottom: 10px;
+	height: 28px;
+	line-height: 28px;
+	font-size: 20px;
+}
+.login-wrap > form > .register-btn{
+	float: right;
+	padding-right: 25px;
+	background: url(../img/right@20.png) center right no-repeat;
+	line-height: 28px;
+	color: #16914f;
+}
+.login-wrap > form > .tips{
+	position: relative;
+	margin: 10px 0;
+	padding: 3px 10px 3px 40px;
+	height: 18px;
+	border: 1px solid #ffe57d;
+	background: #fff6d2;
+	line-height: 18px;
+	font-size: 12px;
+}
+.login-wrap > form > .input-item{
+	margin-bottom: 20px;
+}
+.login-wrap > form > .input-item > .input-wrap{
+	border: 1px solid #ddd;
+	overflow: hidden;
+}
+.login-wrap > form > .input-item > .input-wrap > .label{
+	display: inline-block;
+	margin: 0 5px;
+	width: 50px;
+	float: left;
+	line-height: 45px;
+}
+.login-wrap > form > .input-item > .input-wrap > .label.space{
+	letter-spacing: 6px;
+}
+.login-wrap > form > .input-item > .input-wrap > .input-bar{
+	margin-left: 60px;
+	padding: 14px 5px;
+	height: 15px;
+	line-height: 15px;
+}
+.login-wrap > form > .input-item > .input-wrap > .input-bar.validate{
+	margin-right: 110px;
+}
+.login-wrap > form > .input-item > .input-wrap > .validate-code{
+	float: right;
+	width: 100px;
+}
+.login-wrap > form > .input-item > .tips{
+	margin-top: 5px;
+	padding-left: 20px;
+	background: url("../img/info@20.png") center left no-repeat;
+	line-height: 20px;
+	font-size: 12px;
+	color: #999;
+}
+.login-wrap > form > .tool-bar{
+	font-size: 12px;
+}
+.login-wrap > form > .tool-bar > input{
+	display: inline-block;
+	margin-right: 5px;
+	width: auto;
+}
+.login-wrap > form > .login-btn{
+	margin-top: 20px;
+	height: 45px;
+	background: #eee;
+	font-size: 16px;
+	text-align: center;
+	line-height: 45px;
+	color: #999;
+}
+.login-wrap > form > .login-btn.active{
+	background: #16914f;
+	font-size: 16px;
+	text-align: center;
+	line-height: 45px;
+	color: #fff;
+}

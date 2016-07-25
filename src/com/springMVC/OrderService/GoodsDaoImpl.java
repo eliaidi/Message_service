@@ -125,6 +125,8 @@ public class GoodsDaoImpl implements GoodsDao {
 		List<Goods> goods=query.getResultList();
 		Goods gg=goods.get(0);
 		gg.setShopPrice(price);
+		transaction.commit();
+		entityManager.close();
 		return 1;
 	}
 
@@ -140,6 +142,8 @@ public class GoodsDaoImpl implements GoodsDao {
 		List<Goods> goods=query.getResultList();
 		Goods gg=goods.get(0);
 		gg.setStock(count);
+		transaction.commit();
+		entityManager.close();
 		return 1;
 	}
 
@@ -155,6 +159,8 @@ public class GoodsDaoImpl implements GoodsDao {
 		List<Goods> goods=query.getResultList();
 		Goods gg=goods.get(0);
 		gg.setName(isOnSale);
+		transaction.commit();
+		entityManager.close();
 		return 1;
 	}
 

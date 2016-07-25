@@ -1,0 +1,102 @@
+/* simple header */
+.simple-header{
+	padding: 15px 0 15px 0;
+	border-bottom: 1px solid #eee;
+}
+.simple-header .logo{
+	float: left;
+	width: 60px;
+	height: 60px;
+	vertical-align: middle;
+	overflow: hidden;
+}
+.simple-header .title{
+	margin: 0 auto 0 70px;
+	height: 40px;
+	line-height: 40px;
+	font-size: 24px;
+}
+.simple-header .sub-title{
+	margin: 0 auto 0 70px;
+	height: 20px;
+	line-height: 20px;
+	font-size: 14px;
+}
+/* header */
+.header{
+	padding: 15px 0 15px 0;
+	border-bottom: 1px solid #eee;
+}
+.header .logo{
+	display: block;
+	float: left;
+}
+.header .logo-wrap{
+	float: left;
+	margin-right: 10px;
+}
+.header .title-wrap{
+	float: left;
+}
+.header .title{
+	height: 40px;
+	line-height: 40px;
+	font-size: 24px;
+}
+.header .sub-title{
+	height: 20px;
+	line-height: 20px;
+	font-size: 14px;
+}
+.header > .wrapper > .tool-bar{
+	float: right;
+}
+.header > .wrapper > .tool-bar > .qrcode{
+	margin: 0 10px;
+	width: 60px;
+}
+
+/* nav */
+.nav{
+	background: #16914f;
+	font-size: 14px;
+	color: #fff;
+}
+.nav ul{
+	position: relative;
+}
+.nav ul:before{
+	position: absolute;
+	top: 12.5px;
+	left: 0;
+	width: 1px;
+	height: 20px;
+	background: #6abf86;
+	content: ''
+}
+.nav ul li{
+	position: relative;
+	float: left;
+	width: 120px;
+	height: 45px;
+	text-align: center;
+	line-height: 45px;
+}
+.nav ul li:before{
+	position: absolute;
+	top: 12.5px;
+	right: 0;
+	width: 1px;
+	height: 20px;
+	background: #6abf86;
+	content: ''
+}
+.nav ul li a{
+	display: block;
+	color: #fff;
+}
+.nav ul li:hover,
+.nav ul li.active{
+	background: #0b7d40;
+	font-weight: 700;
+}
