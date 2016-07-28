@@ -12,7 +12,7 @@ $(function (){
 
         this.getSmsCodeUrl = '/msgService/getSmsCode';
 
-        this.validateCodeUrl = '/validateCode';
+        this.validateCodeUrl = '/';
 
     }
 

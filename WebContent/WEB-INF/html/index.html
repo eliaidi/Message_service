@@ -1,7 +1,11 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-    @@include('_meta.inc')
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
     <title>${pageTitle}</title>
     <!-- build:css ../css/login.css -->
     <link rel="stylesheet" href="../css/public/base.css"/>
@@ -12,7 +16,40 @@
 </head>
 <body>
 
-    @@include('_header.inc')
+    <!-- header start -->
+<div class="header">
+    <div class="wrapper clearfix">
+        <a href="${baseUrl}" class="logo clearfix">
+            <div class="logo-wrap">
+                <img src="../img/logo.png"/>
+            </div>
+            <div class="title-wrap">
+            	<h1 class="title">${siteTitle}</h1>
+        		<p class="sub-title">${siteEnglishTitle}</p>
+            </div>
+        </a>
+        <div class="tool-bar">
+        	<div class="qrcode">
+        		<img src="../img/qrcode.png"/>
+        	</div>
+        </div>
+
+    </div>
+</div>
+<!-- header end -->
+<!-- nav start -->
+<div class="nav">
+	<div class="wrapper">
+		<ul class="clearfix">
+			<!-- loop -->
+			<li>
+				<a href="#">nav 1</a>
+			</li>
+			<!-- loop end -->
+		</ul>
+	</div>
+</div>
+<!-- nav end -->
 
     <div class="content clearfix">
         

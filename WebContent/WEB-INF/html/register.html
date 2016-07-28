@@ -1,8 +1,11 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    @@include('_meta.inc')
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
     <title>${pageTitle}</title>
     <!-- build:css ../css/register.css -->
     <link rel="stylesheet" href="../css/public/base.css"/>
@@ -14,7 +17,19 @@
 </head>
 <body class="register">
 
-    @@include('_simpleHeader.inc')
+    <!-- simple header start -->
+<div class="simple-header">
+    <div class="wrapper clearfix">
+        <a href="${baseUrl}">
+            <div class="logo">
+                <img src="../img/logo.png"/>
+            </div>
+        </a>
+        <h1 class="title">${siteTitle}</h1>
+        <p class="sub-title">${siteEnglishTitle}</p>
+    </div>
+</div>
+<!-- simple header end -->
 
     <div class="content wrapper clearfix">
         <div class="right-panel clearfix">
@@ -117,7 +132,36 @@
 
     <input type="hidden" id="ip" value="192.1168.0.1"/>
 
-    @@include('_simpleFooter.inc')
+    <!-- simple footer start -->
+<div class="simple-footer">
+    <div class="wrapper">
+        <p class="links">
+            <span>
+                <a href="#">xxx</a>
+            </span>
+            <span>
+                <a href="#">xxx</a>
+            </span>
+            <span>
+                <a href="#">xxx</a>
+            </span>
+            <span>
+                <a href="#">xxx</a>
+            </span>
+            <span>
+                <a href="#">xxx</a>
+            </span>
+            <span>
+                <a href="#">xxx</a>
+            </span>
+            <span>
+                <a href="#">xxx</a>
+            </span>
+        </p>
+        <p class="copyrights">${copyRights}</p>
+    </div>
+</div>
+<!-- simple footer end -->
 
     <!-- build:js ../js/register.js -->
     <script src="../js/utils/jquery.min.js"></script>

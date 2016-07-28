@@ -1,2 +1,0 @@
-<!-- footer start -->
-<!-- footer end -->
